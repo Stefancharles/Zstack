@@ -1,0 +1,763 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         08/Dec/2019  01:52:20 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas          #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\Coordinator.c                  #
+#    Command line       =  -f "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas      #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoo #
+#                          rd.cfg" (-DCPU32MHZ -DROOT=__near_func             #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f       #
+#                          "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas         #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\..\..\..\Tools\CC2530DB\f8wCon #
+#                          fig.cfg" (-DSECURE=0 -DZG_SECURE_DYNAMIC=0         #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00000800          #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas         #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\Coordinator.c" -D ZIGBEEPRO    #
+#                          -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D           #
+#                          MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -lC             #
+#                          "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas         #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\CoordinatorEB-Pro\List\" -lA   #
+#                          "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas         #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\CoordinatorEB-Pro\List\"       #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas         #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\CoordinatorEB-Pro\Obj\" -e     #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas      #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data collection\CC2530DB\"    #
+#                          -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas      #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\..\SOURCE\" -I                 #
+#                          "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas         #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\..\..\..\ZMAIN\TI2530DB\" -I   #
+#                          "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas         #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\MT\" #
+#                           -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas     #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\ #
+#                          INCLUDE\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\ #
+#                          Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projec #
+#                          ts\zstack\Samples\Humidity data                    #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\ #
+#                          TARGET\CC2530EB\" -I "C:\Users\13911\Desktop\´®¿ÚÊ #
+#                          Õ·¢ÊµÑé\Texas Instruments\ZStack-CC2530-2.3.0-1.4. #
+#                          0\Projects\zstack\Samples\Humidity data            #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL #
+#                          \MCU\CCSOC\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢Êµ #
+#                          Ñé\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\Humidity data                 #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL #
+#                          \INCLUDE\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé #
+#                          \Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Proje #
+#                          cts\zstack\Samples\Humidity data                   #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\STAC #
+#                          K\AF\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Tex #
+#                          as Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\ #
+#                          zstack\Samples\Humidity data                       #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\STAC #
+#                          K\NWK\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Te #
+#                          xas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects #
+#                          \zstack\Samples\Humidity data                      #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\STAC #
+#                          K\SEC\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Te #
+#                          xas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects #
+#                          \zstack\Samples\Humidity data                      #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\STAC #
+#                          K\SAPI\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\T #
+#                          exas Instruments\ZStack-CC2530-2.3.0-1.4.0\Project #
+#                          s\zstack\Samples\Humidity data                     #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\STAC #
+#                          K\SYS\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Te #
+#                          xas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects #
+#                          \zstack\Samples\Humidity data                      #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\STAC #
+#                          K\ZDO\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Te #
+#                          xas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects #
+#                          \zstack\Samples\Humidity data                      #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC #
+#                          \F8W\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Tex #
+#                          as Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\ #
+#                          zstack\Samples\Humidity data                       #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC #
+#                          \" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas   #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\SERV #
+#                          ICES\SADDR\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢Êµ #
+#                          Ñé\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\Humidity data                 #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\SERV #
+#                          ICES\SDATA\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢Êµ #
+#                          Ñé\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\Humidity data                 #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\ #
+#                          INCLUDE\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\ #
+#                          Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projec #
+#                          ts\zstack\Samples\Humidity data                    #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\ #
+#                          HIGH_LEVEL\" -I "C:\Users\13911\Desktop\´®¿ÚÊÕ·¢Êµ #
+#                          Ñé\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Pro #
+#                          jects\zstack\Samples\Humidity data                 #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\ #
+#                          LOW_LEVEL\srf04\" -I "C:\Users\13911\Desktop\´®¿ÚÊ #
+#                          Õ·¢ÊµÑé\Texas Instruments\ZStack-CC2530-2.3.0-1.4. #
+#                          0\Projects\zstack\Samples\Humidity data            #
+#                          collection\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\ #
+#                          LOW_LEVEL\srf04\SINGLE_CHIP\" -Ohz                 #
+#                          --require_prototypes                               #
+#    List file          =  C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas          #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\CoordinatorEB-Pro\List\Coordin #
+#                          ator.lst                                           #
+#    Object file        =  C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas          #
+#                          Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zst #
+#                          ack\Samples\Humidity data                          #
+#                          collection\CC2530DB\CoordinatorEB-Pro\Obj\Coordina #
+#                          tor.r51                                            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\13911\Desktop\´®¿ÚÊÕ·¢ÊµÑé\Texas Instruments\ZStack-CC2530-2.3.0-1.4.0\Projects\zstack\Samples\Humidity data collection\CC2530DB\Coordinator.c
+      1          #include "OSAL.h"
+      2          #include "AF.h"
+      3          #include "ZDApp.h"
+      4          #include "ZDObject.h"
+      5          #include "ZDProfile.h"
+      6          #include "DHT11.h"
+      7          #include<string.h>
+      8          
+      9          #include "Coordinator.h"
+     10          #include "DebugTrace.h"
+     11          
+     12          #if !defined( WIN32 )
+     13          #include "OnBoard.h"
+     14          #endif
+     15          
+     16          /* HAL */
+     17          #include "hal_lcd.h"
+     18          #include "hal_led.h"
+     19          #include "hal_key.h"
+     20          #include "hal_uart.h"
+     21          
+     22          /*typedef struct RFTXBUF
+     23          {
+     24              uint8 type[3];    //Éè±¸ÀàÐÍ
+     25              uint8 myNWK[4];   //ÍøÂçµØÖ·
+     26              uint8 pNWK[4];    //¸¸½ÚµãÍøÂçµØÖ·
+     27          }RFTX;*/
+     28          //¸Ã½á¹¹ÌåÓÃÓÚ´æ·Å½Úµã¶ÔµÄÐÅÏ¢£ºÉè±¸ÀàÐÍ£¬ÍøÂçµØÖ·£¬¸¸½ÚµãÍøÂçµØÖ·
+     29          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     30          const cId_t GenericApp_ClusterList[GENERICAPP_MAX_CLUSTERS] =
+   \                     GenericApp_ClusterList:
+   \   000000   0100         DW 1
+     31          {
+     32            GENERICAPP_CLUSTERID
+     33          };
+     34          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     35          const SimpleDescriptionFormat_t GenericApp_SimpleDesc =
+   \                     GenericApp_SimpleDesc:
+   \   000000   0A           DB 10
+   \   000001   040F         DW 3844
+   \   000003   0100         DW 1
+   \   000005   00           DB 0
+   \   000006   01           DB 1
+   \   000007   ....         DW GenericApp_ClusterList
+   \   000009   01           DB 1
+   \   00000A   ....         DW GenericApp_ClusterList
+     36          {
+     37            GENERICAPP_ENDPOINT,              //  int Endpoint;
+     38            GENERICAPP_PROFID,                //  uint16 AppProfId[2];
+     39            GENERICAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+     40            GENERICAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+     41            GENERICAPP_FLAGS,                 //  int   AppFlags:4;
+     42            GENERICAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+     43            (cId_t *)GenericApp_ClusterList,  //  byte *pAppInClusterList;
+     44            GENERICAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+     45            (cId_t *)GenericApp_ClusterList   //  byte *pAppInClusterList;
+     46            //0,
+     47            //(cId_t *)NULL
+     48          };
+     49          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     50          endPointDesc_t GenericApp_epDesc;
+   \                     GenericApp_epDesc:
+   \   000000                DS 6
+   \   000006                REQUIRE __INIT_XDATA_Z
+     51          
+     52           
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     53          byte GenericApp_TaskID;   // Task ID for internal task/event processing
+   \                     GenericApp_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     54                                    // This variable will be received when
+     55                                    // GenericApp_Init() is called.
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     56          devStates_t GenericApp_NwkState;
+   \                     GenericApp_NwkState:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     57          
+     58          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     59          byte GenericApp_TransID;  // This is the unique message ID (counter)
+   \                     GenericApp_TransID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     60          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     61          afAddrType_t GenericApp_DstAddr;
+   \                     GenericApp_DstAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+     62          //unsigned char uartbuf[128];
+     63          
+     64          /*********************************************************************
+     65           * LOCAL FUNCTIONS
+     66           */
+     67          //void GenericApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg );
+     68          //void GenericApp_HandleKeys( byte shift, byte keys );
+     69          void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+     70          //void GenericApp_SendTheMessage( void );
+     71          //static void rxCB(uint8 port,uint8 event);
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     72          void GenericApp_Init( byte task_id )
+   \                     GenericApp_Init:
+     73          { 
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 29
+   \   000005   74E3         MOV     A,#-0x1d
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   E9           MOV     A,R1
+     74            halUARTCfg_t uartConfig;
+     75            GenericApp_TaskID = task_id;
+   \   00000B   90....       MOV     DPTR,#GenericApp_TaskID
+   \   00000E   F0           MOVX    @DPTR,A
+     76            GenericApp_NwkState = DEV_INIT;
+   \   00000F   90....       MOV     DPTR,#GenericApp_NwkState
+   \   000012   7401         MOV     A,#0x1
+   \   000014   F0           MOVX    @DPTR,A
+     77            GenericApp_TransID = 0;
+   \   000015   90....       MOV     DPTR,#GenericApp_TransID
+   \   000018   E4           CLR     A
+   \   000019   F0           MOVX    @DPTR,A
+     78          /*  
+     79            GenericApp_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
+     80            GenericApp_DstAddr.endPoint = 0;
+     81            GenericApp_DstAddr.addr.shortAddr = 0;*/
+     82          
+     83            /*GenericApp_DstAddr.addrMode = (afAddrMode_t)AddrBroadcast;
+     84            GenericApp_DstAddr.endPoint = 10;
+     85            GenericApp_DstAddr.addr.shortAddr = 0xFFFF;*/
+     86           
+     87            GenericApp_epDesc.endPoint = GENERICAPP_ENDPOINT;
+   \   00001A   90....       MOV     DPTR,#GenericApp_epDesc
+   \   00001D   740A         MOV     A,#0xa
+   \   00001F   F0           MOVX    @DPTR,A
+     88            GenericApp_epDesc.task_id = &GenericApp_TaskID;
+   \   000020   A3           INC     DPTR
+   \   000021   74..         MOV     A,#GenericApp_TaskID & 0xff
+   \   000023   F0           MOVX    @DPTR,A
+   \   000024   A3           INC     DPTR
+   \   000025   74..         MOV     A,#(GenericApp_TaskID >> 8) & 0xff
+   \   000027   F0           MOVX    @DPTR,A
+     89            GenericApp_epDesc.simpleDesc
+     90                      = (SimpleDescriptionFormat_t *)&GenericApp_SimpleDesc;
+   \   000028   A3           INC     DPTR
+   \   000029   74..         MOV     A,#GenericApp_SimpleDesc & 0xff
+   \   00002B   F0           MOVX    @DPTR,A
+   \   00002C   A3           INC     DPTR
+   \   00002D   74..         MOV     A,#(GenericApp_SimpleDesc >> 8) & 0xff
+   \   00002F   F0           MOVX    @DPTR,A
+     91            GenericApp_epDesc.latencyReq = noLatencyReqs;
+   \   000030   A3           INC     DPTR
+   \   000031   E4           CLR     A
+   \   000032   F0           MOVX    @DPTR,A
+     92          
+     93            // Register the endpoint description with the AF
+     94            afRegister( &GenericApp_epDesc );
+   \   000033                ; Setup parameters for call to function afRegister
+   \   000033   7A..         MOV     R2,#GenericApp_epDesc & 0xff
+   \   000035   7B..         MOV     R3,#(GenericApp_epDesc >> 8) & 0xff
+   \   000037   12....       LCALL   ??afRegister?relay
+     95            uartConfig.configured   =TRUE;
+   \   00003A   85..82       MOV     DPL,?XSP + 0
+   \   00003D   85..83       MOV     DPH,?XSP + 1
+   \   000040   7401         MOV     A,#0x1
+   \   000042   F0           MOVX    @DPTR,A
+     96            uartConfig.baudRate     =HAL_UART_BR_115200;
+   \   000043   12....       LCALL   ?XSTACK_DISP0_8
+   \   000046   7404         MOV     A,#0x4
+   \   000048   F0           MOVX    @DPTR,A
+     97            uartConfig.flowControl  =FALSE;
+   \   000049   7402         MOV     A,#0x2
+   \   00004B   12....       LCALL   ?XSTACK_DISP0_8
+   \   00004E   E4           CLR     A
+   \   00004F   F0           MOVX    @DPTR,A
+     98            uartConfig.callBackFunc =NULL;
+   \   000050   741B         MOV     A,#0x1b
+   \   000052   12....       LCALL   ?XSTACK_DISP0_8
+   \   000055   E4           CLR     A
+   \   000056   F0           MOVX    @DPTR,A
+   \   000057   A3           INC     DPTR
+   \   000058   F0           MOVX    @DPTR,A
+     99            HalUARTOpen(0,&uartConfig);
+   \   000059                ; Setup parameters for call to function HalUARTOpen
+   \   000059   85..82       MOV     DPL,?XSP + 0
+   \   00005C   85..83       MOV     DPH,?XSP + 1
+   \   00005F   AA82         MOV     R2,DPL
+   \   000061   AB83         MOV     R3,DPH
+   \   000063   F9           MOV     R1,A
+   \   000064   12....       LCALL   ??HalUARTOpen?relay
+    100          }
+   \   000067   741D         MOV     A,#0x1d
+   \   000069   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00006C                REQUIRE ?Subroutine0
+   \   00006C                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    101          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    102          UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
+   \                     GenericApp_ProcessEvent:
+    103          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V0 + 0,R2
+   \   000007   8B..         MOV     ?V0 + 1,R3
+    104            afIncomingMSGPacket_t *MSGpkt;
+    105            
+    106            if ( events & SYS_EVENT_MSG )
+   \   000009   EB           MOV     A,R3
+   \   00000A   5480         ANL     A,#0x80
+   \   00000C   604F         JZ      ??GenericApp_ProcessEvent_0
+    107            {
+    108              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( GenericApp_TaskID );
+   \   00000E                ; Setup parameters for call to function osal_msg_receive
+   \   00000E   8018         SJMP    ??GenericApp_ProcessEvent_1
+    109              while ( MSGpkt )
+    110              {
+    111                switch ( MSGpkt->hdr.event )
+    112                {
+    113                 /* case ZDO_CB_MSG:
+    114                    GenericApp_ProcessZDOMsgs( (zdoIncomingMsg_t *)MSGpkt );
+    115                    break;
+    116                    
+    117                  case KEY_CHANGE:
+    118                    GenericApp_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    119                    break;
+    120                  case AF_DATA_CONFIRM_CMD:
+    121                    // This message is received as a confirmation of a data packet sent.
+    122                    // The status is of ZStatus_t type [defined in ZComDef.h]
+    123                    // The message fields are defined in AF.h
+    124                    afDataConfirm = (afDataConfirm_t *)MSGpkt;
+    125                    sentEP = afDataConfirm->endpoint;
+    126                    sentStatus = afDataConfirm->hdr.status;
+    127                    sentTransID = afDataConfirm->transID;
+    128                    (void)sentEP;
+    129                    (void)sentTransID;
+    130          
+    131                    // Action taken when confirmation is received.
+    132                    if ( sentStatus != ZSuccess )
+    133                    {
+    134                      // The data wasn't delivered -- Do something
+    135                    }
+    136                    break;*/
+    137          
+    138                    //Èç¹û½ÓÊÕµ½ÏûÏ¢
+    139                  case AF_INCOMING_MSG_CMD:
+    140                    GenericApp_MessageMSGCB( MSGpkt );
+    141                    break;  
+    142          
+    143                   //¼ÓÈëÍøÂçºó
+    144                  case ZDO_STATE_CHANGE:
+    145                    GenericApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+   \                     ??GenericApp_ProcessEvent_2:
+   \   000010   A3           INC     DPTR
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   90....       MOV     DPTR,#GenericApp_NwkState
+   \   000015   F0           MOVX    @DPTR,A
+    146                    if (GenericApp_NwkState == DEV_ZB_COORD) 
+   \   000016   6409         XRL     A,#0x9
+   \   000018   7007         JNZ     ??GenericApp_ProcessEvent_3
+    147                    { 
+    148                      HalLedSet(HAL_LED_2,HAL_LED_MODE_ON);//¼ÓÈëÍøÂçºóÁÁµÆ
+   \   00001A                ; Setup parameters for call to function HalLedSet
+   \   00001A   7A01         MOV     R2,#0x1
+   \   00001C   7902         MOV     R1,#0x2
+   \   00001E   12....       LCALL   ??HalLedSet?relay
+    149                      
+    150                      //osal_set_event(GenericApp_TaskID,SEND_DATA_EVENT);
+    151                       
+    152                    }
+    153                    break;
+    154          
+    155                  default:
+    156                    break;
+    157                }
+    158          
+    159                // Release the memory
+    160                osal_msg_deallocate( (uint8 *)MSGpkt );//ÊÍ·ÅÄÚ´æ
+   \                     ??GenericApp_ProcessEvent_3:
+   \   000021                ; Setup parameters for call to function osal_msg_deallocate
+   \   000021   EE           MOV     A,R6
+   \   000022   FA           MOV     R2,A
+   \   000023   EF           MOV     A,R7
+   \   000024   FB           MOV     R3,A
+   \   000025   12....       LCALL   ??osal_msg_deallocate?relay
+    161          
+    162                // Next
+    163                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( GenericApp_TaskID );
+   \   000028                ; Setup parameters for call to function osal_msg_receive
+   \                     ??GenericApp_ProcessEvent_1:
+   \   000028   90....       MOV     DPTR,#GenericApp_TaskID
+   \   00002B   E0           MOVX    A,@DPTR
+   \   00002C   F9           MOV     R1,A
+   \   00002D   12....       LCALL   ??osal_msg_receive?relay
+   \   000030   8A..         MOV     ?V0 + 2,R2
+   \   000032   8B..         MOV     ?V0 + 3,R3
+   \   000034   AE..         MOV     R6,?V0 + 2
+   \   000036   AF..         MOV     R7,?V0 + 3
+   \   000038   EE           MOV     A,R6
+   \   000039   4F           ORL     A,R7
+   \   00003A   6018         JZ      ??GenericApp_ProcessEvent_4
+   \   00003C   8E82         MOV     DPL,R6
+   \   00003E   8F83         MOV     DPH,R7
+   \   000040   E0           MOVX    A,@DPTR
+   \   000041   24E6         ADD     A,#-0x1a
+   \   000043   6006         JZ      ??GenericApp_ProcessEvent_5
+   \   000045   2449         ADD     A,#0x49
+   \   000047   60C7         JZ      ??GenericApp_ProcessEvent_2
+   \   000049   80D6         SJMP    ??GenericApp_ProcessEvent_3
+   \                     ??GenericApp_ProcessEvent_5:
+   \   00004B                ; Setup parameters for call to function GenericApp_MessageMSGCB
+   \   00004B   EE           MOV     A,R6
+   \   00004C   FA           MOV     R2,A
+   \   00004D   EF           MOV     A,R7
+   \   00004E   FB           MOV     R3,A
+   \   00004F   12....       LCALL   ??GenericApp_MessageMSGCB?relay
+   \   000052   80CD         SJMP    ??GenericApp_ProcessEvent_3
+    164              }
+    165          
+    166              // return unprocessed events
+    167              return (events ^ SYS_EVENT_MSG);
+   \                     ??GenericApp_ProcessEvent_4:
+   \   000054   AA..         MOV     R2,?V0 + 0
+   \   000056   E5..         MOV     A,?V0 + 1
+   \   000058   6480         XRL     A,#0x80
+   \   00005A   FB           MOV     R3,A
+   \   00005B   8004         SJMP    ??GenericApp_ProcessEvent_6
+    168            }
+    169          
+    170          
+    171           /*if ( events & SEND_DATA_EVENT )
+    172            {
+    173              //Humidity_Measure(); //Êª¶ÈµÄ»ñÈ¡
+    174              //½ÓÊÜµ½²É¼¯µÄÊª¶È²¢·¢ËÍÊý¾Ý¸øÐ­µ÷Æ÷
+    175              //GenericApp_SendTheMessage();
+    176              
+    177              // Setup to send message again
+    178              //¶¨Ê±´¥·¢ÊÂ¼þ
+    179              //osal_start_timerEx( GenericApp_TaskID,SEND_DATA_EVENT,5000 );
+    180            return( events & SEND_DATA_EVENT );
+    181            }*/
+    182            return 0;
+   \                     ??GenericApp_ProcessEvent_0:
+   \   00005D   7A00         MOV     R2,#0x0
+   \   00005F   7B00         MOV     R3,#0x0
+   \                     ??GenericApp_ProcessEvent_6:
+   \   000061   7F04         MOV     R7,#0x4
+   \   000063   02....       LJMP    ?BANKED_LEAVE_XDATA
+    183          }
+    184          
+    185          
+    186          //ÏûÏ¢´¦Àíº¯Êý
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    187          void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+   \                     GenericApp_MessageMSGCB:
+    188          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+    189            //uint16 humidity;
+    190            switch ( pkt->clusterId )
+   \   000009   8E82         MOV     DPL,R6
+   \   00000B   8F83         MOV     DPH,R7
+   \   00000D   A3           INC     DPTR
+   \   00000E   A3           INC     DPTR
+   \   00000F   A3           INC     DPTR
+   \   000010   A3           INC     DPTR
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   6401         XRL     A,#0x1
+   \   000014   7002         JNZ     ??GenericApp_MessageMSGCB_0
+   \   000016   A3           INC     DPTR
+   \   000017   E0           MOVX    A,@DPTR
+   \                     ??GenericApp_MessageMSGCB_0:
+   \   000018   7045         JNZ     ??GenericApp_MessageMSGCB_1
+    191            {
+    192              case GENERICAPP_CLUSTERID: 
+    193                HalLedSet(HAL_LED_1,HAL_LED_MODE_ON);
+   \   00001A                ; Setup parameters for call to function HalLedSet
+   \   00001A   7A01         MOV     R2,#0x1
+   \   00001C   7901         MOV     R1,#0x1
+   \   00001E   12....       LCALL   ??HalLedSet?relay
+    194                HalUARTWrite(0, &pkt->cmd.Data[0], pkt->cmd.DataLength); 
+   \   000021                ; Setup parameters for call to function HalUARTWrite
+   \   000021   EE           MOV     A,R6
+   \   000022   241F         ADD     A,#0x1f
+   \   000024   F582         MOV     DPL,A
+   \   000026   EF           MOV     A,R7
+   \   000027   3400         ADDC    A,#0x0
+   \   000029   F583         MOV     DPH,A
+   \   00002B   E0           MOVX    A,@DPTR
+   \   00002C   FC           MOV     R4,A
+   \   00002D   A3           INC     DPTR
+   \   00002E   E0           MOVX    A,@DPTR
+   \   00002F   FD           MOV     R5,A
+   \   000030   EE           MOV     A,R6
+   \   000031   2421         ADD     A,#0x21
+   \   000033   F582         MOV     DPL,A
+   \   000035   EF           MOV     A,R7
+   \   000036   3400         ADDC    A,#0x0
+   \   000038   F583         MOV     DPH,A
+   \   00003A   E0           MOVX    A,@DPTR
+   \   00003B   FA           MOV     R2,A
+   \   00003C   A3           INC     DPTR
+   \   00003D   E0           MOVX    A,@DPTR
+   \   00003E   FB           MOV     R3,A
+   \   00003F   7900         MOV     R1,#0x0
+   \   000041   12....       LCALL   ??HalUARTWrite?relay
+    195                HalUARTWrite(0, "\n", 1);
+   \   000044                ; Setup parameters for call to function HalUARTWrite
+   \   000044   7C01         MOV     R4,#0x1
+   \   000046   7D00         MOV     R5,#0x0
+   \   000048   7A..         MOV     R2,#`?<Constant "\\n">` & 0xff
+   \   00004A   7B..         MOV     R3,#(`?<Constant "\\n">` >> 8) & 0xff
+   \   00004C   7900         MOV     R1,#0x0
+   \   00004E   12....       LCALL   ??HalUARTWrite?relay
+    196                Delay_ms(500);
+   \   000051                ; Setup parameters for call to function Delay_ms
+   \   000051   7AF4         MOV     R2,#-0xc
+   \   000053   7B01         MOV     R3,#0x1
+   \   000055   12....       LCALL   ??Delay_ms?relay
+    197                HalLedSet(HAL_LED_1,HAL_LED_MODE_OFF);
+   \   000058                ; Setup parameters for call to function HalLedSet
+   \   000058   7A00         MOV     R2,#0x0
+   \   00005A   7901         MOV     R1,#0x1
+   \   00005C   12....       LCALL   ??HalLedSet?relay
+    198                //humidity = BUILD_UINT16(pkt->cmd.
+    199                //HalUARTWrite(0,uartbuf,3);
+    200                //osal_memcpy(&nodeinfo[nodenum++],pkt->cmd.Data,11);
+    201                break;
+    202            }
+    203          }
+   \                     ??GenericApp_MessageMSGCB_1:
+   \   00005F   02....       LJMP    ?Subroutine0 & 0xFFFF
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GenericApp_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GenericApp_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GenericApp_ProcessEvent?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GenericApp_ProcessEvent
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GenericApp_MessageMSGCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GenericApp_MessageMSGCB
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "\\n">`:
+   \   000000   0A00         DB "\012"
+    204           /*
+    205          static void rxCB(uint8 port,uint8 event)
+    206          {
+    207            unsigned char changeline[2]={0x0A,0x0D};
+    208            uint8 buf[8];
+    209            uint8 uartbuf[16];
+    210            uint8 i=0;
+    211            HalUARTRead(0,buf,8);
+    212            if(osal_memcmp(buf,"topology",8))
+    213            {
+    214                  for(i=0;i<3;i++)
+    215                  {
+    216                      HalUARTWrite(0,nodeinfo[i].type,3);      //Êä³öÉè±¸ÀàÐÍ
+    217                      
+    218                      HalUARTWrite(0," NWK: ",6);
+    219                      HalUARTWrite(0,nodeinfo[i].myNWK,4);     //Êä³öÍøÂçµØÖ·
+    220                      
+    221                      HalUARTWrite(0," pNWK: ",7);
+    222                      HalUARTWrite(0,nodeinfo[i].pNWK,4);      //Êä³ö¸¸½ÚµãÍøÂçµØÖ·
+    223                      
+    224                      HalUARTWrite(0,changeline,2);
+    225                  }
+    226            }
+    227          }
+    228          /*static void rxCB(uint8 port,uint8 event)
+                 ^
+Warning[Pe009]: nested comment is not allowed
+    229          {
+    230             char theMessageData[7] = "LED_ON";
+    231            HalUARTRead(0,uartbuf,16);
+    232            if(osal_memcmp(uartbuf,"www.wlwmaker.com",16))
+    233            {
+    234                //Ê¹Ð­µ÷Æ÷µÄÁ½¸öµÆÁÁ
+    235                  HalLedSet(HAL_LED_1,HAL_LED_MODE_ON);
+    236                  HalLedSet(HAL_LED_2,HAL_LED_MODE_ON);
+    237                  
+    238                  uint16 NLME_GetShortAddr(void)        //·µ»Ø¸Ã½ÚµãµÄÍøÂçµØÖ·
+    239                  byte*  NLME_GetExtAddr(void)          //·µ»ØÖ¸Ïò¸Ã½ÚµãMACµØÖ·µÄÖ¸Õë
+    240                  uint16 NLME_GetCoordShortAddr(void)   //º¯Êý·µ»Ø¸¸½ÚµãµÄÍøÂçµØÖ·
+    241                  void   NLME_GetCoordExtAdd(byte* buf) //¸Ãº¯ÊýµÄ²ÎÊýÊÇÖ¸Ïò´æ·Å¸¸½ÚµãµÄMACµØÖ·µÄ»º³åÖ¸Õë
+    242                  
+    243                  
+    244                  //Í¨¹ý¹ã²¥·¢ËÍÊý¾Ý¸øÖÕ¶Ë
+    245                  AF_DataRequest( &GenericApp_DstAddr, &GenericApp_epDesc,
+    246                                 GENERICAPP_CLUSTERID,
+    247                                 (byte)osal_strlen( theMessageData ) + 1,
+    248                                 (byte *)&theMessageData,
+    249                                 &GenericApp_TransID,
+    250                                 AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) ;
+    251                  /*HalUARTWrite(0,uartbuf,16);
+                         ^
+Warning[Pe009]: nested comment is not allowed
+    252                  for(unsigned int i=0;i<6666;i++);*/
+    253                
+    254          
+    255          
+    256          
+    257          
+
+   Maximum stack usage in bytes:
+
+     Function                     ISTACK PSTACK XSTACK
+     --------                     ------ ------ ------
+     GenericApp_Init                  0      0     38
+       -> afRegister                  0      0     76
+       -> HalUARTOpen                 0      0     76
+     GenericApp_MessageMSGCB          0      0     21
+       -> HalLedSet                   0      0     18
+       -> HalUARTWrite                0      0     18
+       -> HalUARTWrite                0      0     18
+       -> Delay_ms                    0      0     18
+       -> HalLedSet                   0      0     18
+     GenericApp_ProcessEvent          0      0     12
+       -> osal_msg_receive            0      0     24
+       -> HalLedSet                   0      0     24
+       -> osal_msg_deallocate         0      0     24
+       -> osal_msg_receive            0      0     24
+       -> GenericApp_MessageMSGCB     0      0     24
+
+
+   Segment part sizes:
+
+     Function/Label                  Bytes
+     --------------                  -----
+     GenericApp_ClusterList             2
+     GenericApp_SimpleDesc             12
+     GenericApp_epDesc                  6
+     GenericApp_TaskID                  1
+     GenericApp_NwkState                1
+     GenericApp_TransID                 1
+     GenericApp_DstAddr                12
+     GenericApp_Init                  108
+     ?Subroutine0                       5
+     GenericApp_ProcessEvent          102
+     GenericApp_MessageMSGCB           98
+     ??GenericApp_Init?relay            6
+     ??GenericApp_ProcessEvent?relay    6
+     ??GenericApp_MessageMSGCB?relay    6
+     ?<Constant "\n">                   2
+
+ 
+ 313 bytes in segment BANKED_CODE
+  18 bytes in segment BANK_RELAYS
+  16 bytes in segment XDATA_ROM_C
+  21 bytes in segment XDATA_Z
+ 
+ 331 bytes of CODE  memory
+  16 bytes of CONST memory
+  21 bytes of XDATA memory
+
+Errors: none
+Warnings: 2
